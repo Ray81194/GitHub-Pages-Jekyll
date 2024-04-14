@@ -1,0 +1,10 @@
+services:
+  jekyll:
+    # https://zenn.dev/u1e2k/articles/f701c0553b6836
+    # https://github.com/jekyll/jekyll/issues/9066
+    image: jekyll/jekyll:4.2.0
+    command: jekyll serve
+    volumes:
+      - $PWD:/srv/jekyll
+    ports:
+      - 4000:4000
